@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apliksi RKH KPU Lotim</title>
+    <title>Nama Aplikasi Anda</title>
+    <link rel="manifest" href="manifest.json">
     <style>
-        body {
-            margin: 0;
-        }
-        iframe {
-            display: block;
-            width: 100%; /* Mengisi seluruh lebar viewport */
-            height: 100vh;
-            border: none;
-            background: lightyellow;
-        }
+        body, html { margin:0; padding:0; height:100%; overflow:hidden; }
+        iframe { width:100%; height:100%; border:none; }
     </style>
 </head>
 <body>
-    <iframe src="https://script.google.com/macros/s/AKfycbwf3t63yrONEIF_8PvHQGUT9tcjRO8-VBGRx5vtfhQEio2CzQQSgLwgPlYQZ0iNfP56/exec" allow="camera"></iframe>
+    <iframe src="https://script.google.com/macros/s/AKfycbwf3t63yrONEIF_8PvHQGUT9tcjRO8-VBGRx5vtfhQEio2CzQQSgLwgPlYQZ0iNfP56/exec" allow="geolocation; microphone; camera"></iframe>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
 </body>
 </html>
